@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import showList from "./showList"
+import homeInit from "./home";
 export default combineReducers({
-    showList
+    homeInit
 })

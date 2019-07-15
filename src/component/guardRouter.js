@@ -12,7 +12,7 @@ class GuardRouter extends Component {
     }
     render() {
         return (
-            <div>
+            <div >
                 <this.props.component title={this.props.nameStr}/>
                 {this.props.isShow ? <Nav className={"nav"} /> : ""}
                 {/* <Nav className={"nav"} style={{display:this.props.isShow ?"block":"none"}}/> */}
