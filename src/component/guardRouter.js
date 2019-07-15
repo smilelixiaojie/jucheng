@@ -8,12 +8,12 @@ class GuardRouter extends Component {
                 this.props.history.push("/login");
             }
         }
-        console.log(this.props)
+        console.log(this.props.nameStr)
     }
     render() {
         return (
             <div>
-                <this.props.component />
+                <this.props.component title={this.props.nameStr}/>
                 {this.props.isShow ? <Nav className={"nav"} /> : ""}
                 {/* <Nav className={"nav"} style={{display:this.props.isShow ?"block":"none"}}/> */}
             </div>

@@ -11,4 +11,7 @@ export default class Mine extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        document.title = this.props.title
+    }
 }

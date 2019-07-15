@@ -8,4 +8,7 @@ export default class Picket extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        document.title = this.props.title
+    }
 }

@@ -8,4 +8,7 @@ export default class Move extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        document.title = this.props.title
+    }
 }

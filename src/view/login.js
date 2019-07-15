@@ -8,4 +8,7 @@ export default class Login extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        document.title = this.props.title
+    }
 }

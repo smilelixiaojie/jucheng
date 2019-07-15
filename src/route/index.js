@@ -33,7 +33,7 @@ export default [
         component:Mine,
         nameStr:"我的",
         isAuthorization:true,
-        isShow:false
+        isShow:true
     },
     {
         path:"/login",

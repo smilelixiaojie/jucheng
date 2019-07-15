@@ -17,7 +17,6 @@ class App extends Component {
         <Router>
           {
             rootRoute.map((v, i) => {
-             
               return (
                 <Route key={i} path={v.path} exact={v.exact} render={() => <GuardRouter {...v}></GuardRouter>} />
               )
@@ -34,10 +33,10 @@ function mapStateToProps(state){
     state
   }
 }
-function mapActionToProps(dispatch){
+function mapDispatchToProps(dispatch){
   return{
 
   }
 }
 
-export default connect(mapStateToProps,mapActionToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);

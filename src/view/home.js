@@ -8,4 +8,7 @@ export default class Home extends Component{
             </div>
         )
     }
+    componentDidMount(){
+        document.title = this.props.title
+    }
 }
