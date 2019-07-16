@@ -34,7 +34,7 @@ class Home extends Component {
                         <div className="swiper-pagination"></div>
                     </div>
                 </div>
-                <div className="classify_list">
+                <div className="classify_list" >
                     {
                         this.props.classifyList.map((v, i) => {
                             return (
