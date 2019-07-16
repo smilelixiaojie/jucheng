@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import homeAction from "../store/actionCreator/home";
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class Home extends Component {
     render() {
@@ -15,7 +15,7 @@ class Home extends Component {
                     <div className="site">
                         <span>全国</span>
                     </div>
-                    
+
                     <input type="text" placeholder="搜索热门演出" className="search" />
                 </div>
                 <div className="swiper">
@@ -38,10 +38,10 @@ class Home extends Component {
                     {
                         this.props.classifyList.map((v, i) => {
                             return (
-                                <div key={i} className="classify_list_item" onClick={()=>{
+                                <div key={i} className="classify_list_item" onClick={() => {
                                     this.props.history.push("/show");
                                 }}>
-                                    <img src={v.pic} alt=""/>
+                                    <img src={v.pic} alt="" />
                                     <span>{v.name}</span>
                                 </div>
                             )
@@ -57,15 +57,58 @@ class Home extends Component {
                             return (
                                 <div key={i} className="item">
                                     <h3>{v.name}</h3>
-                                    <p dangerouslySetInnerHTML={{__html:v.describe}}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: v.describe }}></p>
                                     <img src={v.pic} alt="" />
                                 </div>
                             )
                         })
                     }
                 </div>
-                <div>
-                    <h3></h3>
+                <div className="hot_show">
+                    <h3>热门演出</h3>
+                    <div className="hot_show_pic">
+                        <div className="swiper-container">
+                            <div className="swiper-wrapper">
+                                {
+                                    this.props.hotShowList.map((v, i) => {
+                                        return (
+                                            <div className="swiper-slide" key={i}>
+                                                <img src={v.pic} alt="" />
+                                                <p>{v.show_name}</p>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                            <div className="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="floor_show">
+                    {
+                        this.props.floorShowList.map((v, i) => {
+                            return (
+                                <div key={i} className="floor_show_item">
+                                    <h3>{v.title}</h3>
+                                    <div className="swiper-container">
+                                        <div className="swiper-wrapper">
+                                            {
+                                                v.list.map((v, i) => {
+                                                    return (
+                                                        <div className="swiper-slide" key={i}>
+                                                            <img src={v.pic} alt="" />
+                                                            <p>{v.show_name}</p>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                        <div className="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         )
@@ -75,11 +118,11 @@ class Home extends Component {
 
         new Swiper('.swiper-container', {
             observer: true,
-            loop: true, 
-            autoplay: {   
+            loop: true,
+            autoplay: {
                 disableOnInteraction: false,
             },
-            pagination: { 
+            pagination: {
                 el: '.swiper-pagination'
             }
         })
@@ -87,13 +130,17 @@ class Home extends Component {
     componentWillMount() {
         this.props.getSlideList();
         this.props.getClassifyList();
+        this.props.getHotShowList();
+        this.props.getFloorShow();
     }
 }
 function mapStateToProps(state) {
     return {
         slideList: state.homeInit.slideList,
         classifyList: state.homeInit.classifyList,
-        operationList: state.homeInit.operationList
+        operationList: state.homeInit.operationList,
+        hotShowList: state.homeInit.hotShowList,
+        floorShowList: state.homeInit.floorShowList,
     }
 }
 export default withRouter(connect(mapStateToProps, dispatch => bindActionCreators(homeAction, dispatch))(Home));
