@@ -4,12 +4,15 @@
 }
 .site{
     display: inline-block;
-
+}
+.site span{
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
 }
 .Home{
     width: 375px;
     height: 100%;
-  
 }
 .header{
     position: fixed;
@@ -20,6 +23,7 @@
     width: 100%;
     height: 40px;
     line-height: 40px;
+    z-index: 300;
 }
 .search{
     align-items: center;
