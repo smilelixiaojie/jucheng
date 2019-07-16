@@ -10,5 +10,11 @@ export default (state = homeState, { type, actions }) => {
     if(type === "UP_OPERATION"){
         state.operationList = actions.operationList;
     }
+    if(type === "UP_HOTSHOWLIST"){
+        state.hotShowList = actions.hotShowList;
+    }
+    if(type === "UP_FLOORSHOW"){
+        state.floorShowList = actions.floorShowList;
+    }
     return state;
 }
