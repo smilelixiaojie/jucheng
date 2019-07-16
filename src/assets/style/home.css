@@ -4,12 +4,15 @@
 }
 .site{
     display: inline-block;
-
+}
+.site span{
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
 }
 .Home{
     width: 375px;
     height: 100%;
-  
 }
 .header{
     position: fixed;
@@ -20,6 +23,7 @@
     width: 100%;
     height: 40px;
     line-height: 40px;
+    z-index: 300;
 }
 .search{
     align-items: center;
@@ -43,6 +47,7 @@
     height: 83px;
     display: flex;
     justify-content: space-between;
+    text-align: center
 }
 .classify_list_item{
     display: inline-block;
@@ -57,7 +62,103 @@
     font-size: 13px;
     text-align: center
 }
+.banner{
+    text-align: center
+}
 .banner img{
     width: 345px;
     height: 100px;
+}
+.operation_list{
+    width:345.2px;
+    height: 202px;
+    overflow: hidden;
+    text-align: center;
+    margin-top:20px;
+}
+.operation_list .item:nth-child(1){
+    display: inline-block;
+    width: 169.59px;
+    height: 90.04px;
+}
+.operation_list .item:nth-child(2){
+    display: inline-block;
+    width: 169.59px;
+    height: 90.04px;
+}
+.operation_list .item:nth-child(3){
+    display: inline-block;
+    width: 111px;
+    height: 106px;
+}
+.operation_list .item:nth-child(4){
+    display: inline-block;
+    width: 111px;
+    height: 106px;
+}
+.operation_list .item:nth-child(5){
+    display: inline-block;
+    width: 111px;
+    height: 106px;
+}
+.operation_list img{
+    width: 45px;
+    height: 45px;
+}
+.operation_list h3{
+    font-size: 15px;
+}
+.operation_list p{
+    font-size: 11px;
+}
+.hot_show{
+    overflow: hidden;
+    width: 345px;
+    height: 276px;
+    padding: 20px 0 35px 15px;
+}
+.hot_show h3{
+    width: 345px;
+    height: 23px;
+    line-height: 23px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #232323;
+    margin-bottom: 15px; 
+}
+.hot_show_pic{
+    width: 345px;
+    height: 300px;
+}
+/* .swiper-slide{
+    width: 50px;
+    height: 146px;
+} */
+.floor_show{
+    width:345px;
+    height: 480px;
+    margin-top:40px; 
+    padding: 20px 0 35px 15px;
+}
+.floor_show h3{
+    width: 345px;
+    height: 23px;
+    line-height: 23px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #232323;
+    margin-bottom: 15px; 
+}
+.floor_show_item{
+    margin-bottom:40px; 
+}
+.bg_c{
+    width: 345px;
+    height: 150px;
+    background-color:brown;
+    padding: 14px 0 14px 15px;
+}
+.bg_c img{
+    width: 107px;
+    height: 146px;
 }

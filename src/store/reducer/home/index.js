@@ -2,13 +2,19 @@ import homeState from "../../state/home";
 export default (state = homeState, { type, actions }) => {
     state = JSON.parse(JSON.stringify(state));
     if (type === "UP_SLIDELIST") {
-        state.slideList = state.slideList.concat(actions.slideList);
+        state.slideList = actions.slideList;
     }
     if (type === "UP_CLASSIFYLIST") {
-        state.classifyList = state.classifyList.concat(actions.classifyList);
+        state.classifyList = actions.classifyList;
     }
     if(type === "UP_OPERATION"){
-        state.operationList = state.operationList.concat(actions.operationList);
+        state.operationList = actions.operationList;
+    }
+    if(type === "UP_HOTSHOWLIST"){
+        state.hotShowList = actions.hotShowList;
+    }
+    if(type === "UP_FLOORSHOW"){
+        state.floorShowList = actions.floorShowList;
     }
     return state;
 }
