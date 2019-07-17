@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import "../assets/style/login.css"
 import Router,{withRouter} from "react-router-dom"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -16,14 +17,21 @@ class Login extends Component{
           
             <div className="Login">
                 <div className="navbar">
-                    <span style={{color:"red", height:"40px", width:"40px",backgroundColor:"blue"} } onClick={this.goback.bind(this)}>返回</span>
+                   <div>
+                      <span style={{color:"black", height:"40px", width:"40px"} } onClick={this.goback.bind(this)}>返回</span>
+                   </div>
                 </div>
-                <h1>欢迎来到聚橙网</h1> 
-                <form >
-                  <p> 用户名：<input type="text" name="userName" onChange={this.onChang.bind(this)} defaultValue=""/></p>
-                  <p>密码：<input type="password" name="password" onChange={this.onChang.bind(this)} defaultValue=""/></p> 
-                    <button onClick={this.login.bind(this)}>登录</button>
-                </form>            
+                <div className="tit">
+                   <h1>欢迎来到聚橙网</h1>
+                </div>
+                <ul className="list">
+                    <li><input type="text" name="userName" onChange={this.onChang.bind(this)} defaultValue="请输入用户名"/></li>
+                    <li><input type="password" name="password" onChange={this.onChang.bind(this)} defaultValue="请输入密码"/></li>
+                </ul> 
+                <div className="btn">
+                  <div onClick={this.login.bind(this)}>登录</div>        
+                </div>   
+                       
             </div>
            
         )
