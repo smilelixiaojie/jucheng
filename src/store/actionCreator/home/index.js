@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swiper from 'swiper/dist/js/swiper.js';
 export default {
     getSlideList() {
         return (dispatch) => {
@@ -63,6 +64,12 @@ export default {
                             floorShowList,
                         }
                     })
+                    new Swiper('.drag-container', {
+                        pagination: '.drag-pagination',
+                        slidesPerView: 4,
+                        centeredSlides: false,
+                        paginationClickable: true,
+                    });
                 })
         }
     },
