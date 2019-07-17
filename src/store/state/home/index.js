@@ -1,5 +1,8 @@
 export default {
     slideList:[],
     classifyList:[],
-    operationList:[]
+    operationList:[],
+    hotShowList:[],
+    floorShowList:[],
+    recommendShow:[]
 }
