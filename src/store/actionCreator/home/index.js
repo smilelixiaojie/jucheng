@@ -65,5 +65,19 @@ export default {
                     })
                 })
         }
+    },
+    getRecommendShow() {
+        return (dispatch) => {
+            axios.get("https://m.juooo.com/home/getRecommendShow?cityAdd=SZ&page=1&version=6.0.1&referer=2&timestamp=1563334465")
+                .then(({ data }) => {
+                    const recommendShow = data.data.recommend_show_list;
+                    dispatch({
+                        type: "UP_RECOMMEND",
+                        actions: {
+                            recommendShow,
+                        }
+                    })
+                })
+        }
     }
 }

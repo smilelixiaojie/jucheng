@@ -3,5 +3,6 @@ export default {
     classifyList:[],
     operationList:[],
     hotShowList:[],
-    floorShowList:[]
+    floorShowList:[],
+    recommendShow:[]
 }
