@@ -38,8 +38,13 @@ class Home extends Component {
                     {
                         this.props.classifyList.map((v, i) => {
                             return (
-                                <div key={i} className="classify_list_item" onClick={()=>{
-                                    this.props.history.push("/show");
+                                <div key={i} className="classify_list_item" onClick={()=>{                                   
+                                    let arr =  v.url.split("?")[1].split("&")
+                                    let obj = {};
+                                            for (let i of arr) {
+                                                obj[i.split("=")[0]] = i.split("=")[1];
+                                        }      
+                                    this.props.history.push("/show/"+obj.cid+"/"+obj.caid);
                                 }}>
                                     <img src={v.pic} alt=""/>
                                     <span>{v.name}</span>
@@ -72,7 +77,7 @@ class Home extends Component {
     }
     componentDidMount() {
         document.title = this.props.title;
-
+        console.log(this.props)
         new Swiper('.swiper-container', {
             observer: true,
             loop: true, 
