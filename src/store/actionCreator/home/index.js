@@ -20,7 +20,8 @@ export default {
             axios.get("https://m.juooo.com/home/getClassifyItem?city_id=0&operation_limit=5&version=6.0.1&referer=2")
                 .then(({ data }) => {
                     const classifyList = data.data.classify_list;
-                    const operationList = data.data.operation_list
+                    const operationList = data.data.operation_list;
+                    
                     dispatch({
                         type: "UP_CLASSIFYLIST",
                         actions: {
@@ -61,6 +62,20 @@ export default {
                         type:"UP_FLOORSHOW",
                         actions: {
                             floorShowList,
+                        }
+                    })
+                })
+        }
+    },
+    getRecommendShow() {
+        return (dispatch) => {
+            axios.get("https://m.juooo.com/home/getRecommendShow?cityAdd=SZ&page=1&version=6.0.1&referer=2&timestamp=1563334465")
+                .then(({ data }) => {
+                    const recommendShow = data.data.recommend_show_list;
+                    dispatch({
+                        type: "UP_RECOMMEND",
+                        actions: {
+                            recommendShow,
                         }
                     })
                 })

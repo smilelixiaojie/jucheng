@@ -16,5 +16,8 @@ export default (state = homeState, { type, actions }) => {
     if(type === "UP_FLOORSHOW"){
         state.floorShowList = actions.floorShowList;
     }
+    if(type === "UP_RECOMMEND"){
+        state.recommendShow = actions.recommendShow;
+    }
     return state;
 }
