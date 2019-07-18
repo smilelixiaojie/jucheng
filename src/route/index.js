@@ -3,7 +3,7 @@ import Move from "../view/move";
 import Picket from "../view/picket";
 import Mine from "../view/mine";
 import Login from "../view/login";
-
+import ticket from "../route/ticket"
 export default [
     {
         path:"/",
@@ -41,5 +41,7 @@ export default [
         component:Login,
         nameStr:"登陆",
         isShow:false
-    }
+    },
+    ...ticket
+
 ]
