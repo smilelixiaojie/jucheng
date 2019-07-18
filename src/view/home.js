@@ -168,12 +168,7 @@ class Home extends Component {
             }
         })
 
-        new Swiper('.drag-container', {
-            pagination: '.drag-pagination',
-            slidesPerView: 4,
-            centeredSlides: false,
-            paginationClickable: true,
-        });
+    
     }
     componentWillMount() {
         this.props.getSlideList();
