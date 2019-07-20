@@ -133,8 +133,8 @@ class Home extends Component {
                     }
                 </div>
                 <div className="recommend_show_list">
-                    <h3>为你推荐</h3>
-                    {
+                    <h3>为你推荐</h3>              
+                    {                     
                         this.props.recommendShow.map((v, i) => {
                             return (
                                 <div className="recommend_show_list_item" key={i}>

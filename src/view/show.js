@@ -14,8 +14,6 @@ constructor(props){
     componentWillMount(){
         this.props.getShowCategory();
         this.props.getShowList();
-        
-        
        
     }
         render(){

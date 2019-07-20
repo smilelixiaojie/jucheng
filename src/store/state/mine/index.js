@@ -1,4 +1,4 @@
 export default {
-    firstdata:"",
-    icondata:""
+    firstdata:[],
+    icondata:[]
 }
