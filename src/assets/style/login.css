@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+   
+}
+.navbar{
+    width: 100%;
+    height: 45px;
+}
+.navbar>div{
+    width: 100%;
+    height: 45px;
+    padding-left:15px;
+    padding-right: 15px; 
+}
+.navbar span{
+    left: 0;
+    line-height: 45px;
+}
+.tit{
+    width: 100%;
+    height: 100px;
+}
+.tit h1{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+}
+.list{
+    width: 100%;
+}
+.list li{
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+}
+.list li>input{
+    width: 260px;
+    height: 30px;
+   margin-left: 50px;
+   
+}
+.btn{
+    width: 100%; 
+    height: 80px;
+}
+.btn>div{
+    width: 260px;
+    height: 40px;
+    margin-left: 60px;
+    border-radius:40px;
+    text-align: center;
+    line-height: 40px;
+    color: #FEFEFE;
+    background: -webkit-linear-gradient(left, #ff9a34, #ff4d4a);
+    
+}

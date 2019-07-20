@@ -179,6 +179,7 @@ class Home extends Component {
             }
         })
 
+<<<<<<< HEAD
         new Swiper('.drag-container', {
             pagination: '.drag-pagination',
             slidesPerView: 4,
@@ -186,6 +187,9 @@ class Home extends Component {
             paginationClickable: true,
         });
        
+=======
+    
+>>>>>>> d9d9878baf6728b3aca19fe632efe4e99fe72363
     }
     componentWillMount() {
         this.props.getSlideList();

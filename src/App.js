@@ -7,7 +7,7 @@ import 'swiper/dist/css/swiper.min.css'
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {
+    this.state =   {
 
     }
   }

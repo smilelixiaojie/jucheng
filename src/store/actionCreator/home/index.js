@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swiper from 'swiper/dist/js/swiper.js';
 export default {
     getSlideList() {
         return (dispatch) => {
@@ -58,13 +59,19 @@ export default {
             axios.get("https://m.juooo.com/home/getFloorShow?city_abb=SZ&city_id=1&version=6.0.1&referer=2&timestamp=1563266607")
                 .then(({data})=>{
                     const floorShowList = data.data;
-                    console.log(floorShowList)
+                    // console.log(floorShowList)
                     dispatch({
                         type:"UP_FLOORSHOW",
                         actions: {
                             floorShowList,
                         }
                     })
+                    new Swiper('.drag-container', {
+                        pagination: '.drag-pagination',
+                        slidesPerView: 4,
+                        centeredSlides: false,
+                        paginationClickable: true,
+                    });
                 })
         }
     },
