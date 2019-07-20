@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import homeAction from "../store/actionCreator/home";
 import Swiper from 'swiper/dist/js/swiper.js'
-import 'swiper/dist/css/swiper.min.css'
 import { withRouter } from "react-router-dom";
+import axios from "axios";
 
 class Home extends Component {
     render() {
@@ -55,7 +55,18 @@ class Home extends Component {
                     }
                 </div>
                 <div className="banner">
-                    <img src="https://image.juooo.com//group1/M00/03/7A/rAoKNV0jflaAL5_EAAD3QE0LKFo824.png" alt="" />
+                    <img src="https://image.juooo.com//group1/M00/03/7A/rAoKNV0jflaAL5_EAAD3QE0LKFo824.png" onClick={
+                        
+                        ()=>{
+                            //let b= JSON.stringify(this.props.adlist).slice(JSON.stringify(this.props.adlist).indexOf("<body>"));
+                            this.props.history.push({
+                            pathname:"/tour/tourshowinfo?sid=35564",
+                            state:{
+                                b:this.props.adlist
+                            }
+                        });
+                        }
+                    } alt="" />
                 </div>
                 <div className="operation_list">
                     {
@@ -174,6 +185,7 @@ class Home extends Component {
             centeredSlides: false,
             paginationClickable: true,
         });
+       
     }
     componentWillMount() {
         this.props.getSlideList();
@@ -181,6 +193,8 @@ class Home extends Component {
         this.props.getHotShowList();
         this.props.getFloorShow();
         this.props.getRecommendShow();
+        this.props.getTourPage();
+        console.log(this.props.adlist)
     }
 }
 function mapStateToProps(state) {
@@ -191,6 +205,7 @@ function mapStateToProps(state) {
         hotShowList: state.homeInit.hotShowList,
         floorShowList: state.homeInit.floorShowList,
         recommendShow: state.homeInit.recommendShow,
+        adlist:state.homeInit.adlist
     }
 }
 export default withRouter(connect(mapStateToProps, dispatch => bindActionCreators(homeAction, dispatch))(Home));

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+$ppr:750px/16/1rem; // pixel per rem
+
+/* 颜色变量 */
+$defaultBg: #f6f6f6;
+$standardColor: #ff7919;
+$firstTitleColor: #212121;
+$secondTitleColor: #666;
+$ThirdTitleColor: #999;
+$infoFontColor: #d9d9d9;
+$iconDefaultColor: #d8d8d8;
+$borderColor: #f2f2f2;
+$borderBottomColor: #e7e7e7;
+$splitLineColor: #f2f2f2;
+$advanceBg: #fff;
+$mainColor: #ff7919;
+
+/* 标题字体大小变量 */
+$defaultFontSize: 28px/$ppr;
+$primaryFontSize: 34px/$ppr;
+$firstTitleFontSize: 30px/$ppr;
+$secondTitleFontSize: 30px/$ppr;
+$thirdTitleFontSize: 24px/$ppr;
+$fontSize26: 26px/$ppr;
+$fontSize24: 24px/$ppr;
+$fontSize28: 28px/$ppr;
+$fontSize32: 32px/$ppr;
+$fontSize30: 30px/$ppr;
+$fontSize36: 36px/$ppr;
+$fontSize38: 38px/$ppr;
+$fontSize40: 40px/$ppr;
+$tagFontSize: 20px/$ppr;
+
+/* 左右上下间距 */
+$marginLeft: 32px/$ppr;
+$marginRight: 30px/$ppr;
+$marginBT: 22px/$ppr;
+$headerH: 88px/$ppr;
+$bottomPadding: 148px/$ppr;
+
+/* 按钮激活hover active */
+$defaultBtnColor: #ffbc8c;
+
+/* display:flex */
+@mixin displayFlex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* flex 比例 */
+@mixin flexSize($size) {
+    flex: $size;
+    -ms-flex: $size;
+    -webkit-flex: $size;
+    box-flex: $size;
+    -ms-box-flex: $size;
+    -webkit-box-flex: $size;
+}
+
+/* 显示几行之后隐藏 */
+@mixin hideWords($line) {
+    display: -webkit-box;
+    overflow: hidden;
+
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    //white-space: nowrap;
+}
+
+/* 只显示一行 */
+@mixin textSingle() {
+    /* display: -webkit-box; */
+    overflow: hidden;
+    /* -webkit-line-clamp: 1; */
+    /* -webkit-box-orient: vertical; */
+    //word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 子盒子对其方式 */
+@mixin flex-align-item($type) {
+    -webkit-box-align: $type;
+    -ms-flex-align: $type;
+    -webkit-align-items: $type;
+    align-items: $type;
+}
+
+/* 两端对齐 */
+@mixin flex-justify-content($type,$packType) {
+    -webkit-box-pack: $packType;
+    -ms-flex-pack: $packType;
+    -webkit-justify-content: $type;
+    -ms-justify-content: $type;
+    -moz-justify-content: $type;
+    justify-content: $type;
+}
+
+/* flex 垂直输出 */
+@mixin flex-direction-vertical() {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/*  背景图片 */
+@mixin defaultBg() {
+    background: url(../images/common/logo-default.png) center center no-repeat;
+}
