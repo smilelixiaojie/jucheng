@@ -4,6 +4,7 @@ export default {
     operationList:[],
     hotShowList:[],
     floorShowList:[],
+   
     recommendShow:[],
     adlist:{}
 }

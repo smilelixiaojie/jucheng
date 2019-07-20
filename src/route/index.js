@@ -5,6 +5,7 @@ import Mine from "../view/mine";
 import Login from "../view/login";
 import show from "./show";
 import Plus from "./plus";
+import search from "./search";
 import tour from "./tour"
 export default [
     {
@@ -46,5 +47,6 @@ export default [
     },
     ...show,
     ...Plus,
+    ...search,
     ...tour
 ]
