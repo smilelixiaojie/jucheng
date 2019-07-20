@@ -4,6 +4,7 @@ import Picket from "../view/picket";
 import Mine from "../view/mine";
 import Login from "../view/login";
 import show from "./show";
+import search from "./search";
 export default [
     {
         path:"/",
@@ -42,5 +43,6 @@ export default [
         nameStr:"登陆",
         isShow:false
     },
-    ...show
+    ...show,
+    ...search
 ]

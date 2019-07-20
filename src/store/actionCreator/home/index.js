@@ -57,7 +57,6 @@ export default {
             axios.get("https://m.juooo.com/home/getFloorShow?city_abb=SZ&city_id=1&version=6.0.1&referer=2&timestamp=1563266607")
                 .then(({data})=>{
                     const floorShowList = data.data;
-                    console.log(floorShowList)
                     dispatch({
                         type:"UP_FLOORSHOW",
                         actions: {
