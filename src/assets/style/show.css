@@ -2,12 +2,19 @@
     margin: 0;
     padding: 0;
 }
-.swiper-slide {
+.lxjswiper-slide {
         text-align: center;
         font-size: 16px;
         background: #fff;
-        width: 80px;
-        height: 20px;
+        width: 60px;
+        line-height: 40px;
+        
+}
+.lxjleft{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 15px;
 }
 .lxjtitle{
     border-bottom:1px solid #333;
@@ -43,8 +50,12 @@
     padding: 10px;
     justify-content: space-around;
 }
-.lxjci>h3{
-    width: 100%;  
+.lxjci>h2{
+    width: 100%;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;  
     /* height: 50px; 
     text-overflow: ellipsis; */
 }
