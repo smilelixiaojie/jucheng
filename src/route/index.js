@@ -45,9 +45,6 @@ export default [
         isShow:false
     },
     ...show,
-<<<<<<< HEAD
-    ...search
-=======
+    ...search,
     ...tour
->>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
 ]

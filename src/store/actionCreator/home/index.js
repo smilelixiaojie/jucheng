@@ -36,10 +36,7 @@ export default {
                             operationList
                         }
                     })
-<<<<<<< HEAD
-=======
                    
->>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
                 })
         }
     },
@@ -63,10 +60,7 @@ export default {
             axios.get("https://m.juooo.com/home/getFloorShow?city_abb=SZ&city_id=1&version=6.0.1&referer=2&timestamp=1563266607")
                 .then(({data})=>{
                     const floorShowList = data.data;
-<<<<<<< HEAD
-=======
                     // console.log(floorShowList)
->>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
                     dispatch({
                         type:"UP_FLOORSHOW",
                         actions: {
@@ -95,9 +89,6 @@ export default {
                     })
                 })
         }
-<<<<<<< HEAD
-    }
-=======
     },
     getTourPage(){
         return((dispatch)=>{
@@ -118,5 +109,4 @@ export default {
         )
     }
    
->>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
 }
