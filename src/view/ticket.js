@@ -3,7 +3,7 @@ import "../assets/style/ticket.css"
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux"
 import Swiper from 'swiper/dist/js/swiper.js'
-import 'swiper/dist/css/swiper.min.css'
+// import 'swiper/dist/css/swiper.min.css'
 import axios from "axios"
 class Ticket extends Component {
 
@@ -201,8 +201,8 @@ class Ticket extends Component {
                                         <div className="item__info__name">
                                             <div>{v.name}</div>
                                         </div>
-                                        <div className="item__info__place">{v.venue_name}</div>
-                                        <div className="item__info__price">{v.min_price}起</div>
+                                        <div className="item__info__place">{v.city_name} | {v.venue_name}</div>
+                                        <div className="item__info__price" style={{color:"orange",fontSize:"16px",fontWeight:"900"}}>￥{v.min_price}<span style={{fontSize:"12px",color:"#999"}}>起</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -214,8 +214,11 @@ class Ticket extends Component {
 
                 </div>
                 <div className="bottom-bar_detail__bottom-bar">
-                    <div className="bottom-bar__client-service"></div>
-                    <div className="bottom-bar__btn"></div>
+                    <div className="bottom-bar__client-service">
+                        <img alt="" src="../image/kefu.png"/>
+                        <span>客服</span>
+                    </div>
+                    <div className="bottom-bar__btn"><h3>选座购买</h3></div>
 
                 </div>
             </div>

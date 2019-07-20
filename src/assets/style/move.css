@@ -44,18 +44,30 @@
     display: block;
     margin-top: 7px;
 }
-.swiper-container{
+.swiperz-container{
     width:310px;
     height:193px;
    
 }
 .swiper-container>.swiper-wrapper{
     margin-top: 30px;
-   
+    width:310px;
+    height:193px;
 }
-.swiper-slide>img{
+.swiper-slide{
+    width: 114px;
+    height: 146px;
+}
+.swiper-slide>.img{
     width: 107px;
     height: 146px;
     margin-top:16px;
     margin-right:20px;
+    margin-right: 15px;
+
+}
+.swiper-slide>p{
+    width: 117px;
+    height:28px;
+   
 }

@@ -4,6 +4,7 @@ import Picket from "../view/picket";
 import Mine from "../view/mine";
 import Login from "../view/login";
 import ticket from "../route/ticket"
+import show from "./show";
 export default [
     {
         path:"/",
@@ -42,6 +43,7 @@ export default [
         nameStr:"登陆",
         isShow:false
     },
-    ...ticket
+    ...ticket,
 
+    ...show
 ]

@@ -32,7 +32,7 @@ class Movie extends Component {
                                                     return (
                                                         <div key={i} className="swiper-slide">
                                                             <p>{v.show_time}</p>
-                                                            <img src={v.pic} alt="" onClick={()=>{
+                                                            <img className="img" src={v.pic} alt="" onClick={()=>{
                                                                 this.props.history.push("/ticket/"+v.id+"/"+v.show_id)
                                                             }}/>
                                                         </div>

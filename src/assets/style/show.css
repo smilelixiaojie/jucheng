@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.swiper-slide {
+        text-align: center;
+        font-size: 16px;
+        background: #fff;
+        width: 80px;
+        height: 20px;
+}
+.lxjtitle{
+    border-bottom:1px solid #333;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+.lxjtitle>button{
+    position: absolute;
+    left: 0;
+}
+.lxjtitle>p{
+   font-size: 18px;
+      
+}
+.lxjbig{
+    display: flex;
+    width: 100%;
+    padding: 18px;
+}
+.lxjbig>img{
+    width: 40%;
+    height: 200px;
+}
