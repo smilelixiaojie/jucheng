@@ -3,6 +3,7 @@ import Move from "../view/move";
 import Picket from "../view/picket";
 import Mine from "../view/mine";
 import Login from "../view/login";
+import ticket from "../route/ticket"
 import show from "./show";
 import Plus from "./plus";
 import search from "./search";
@@ -45,6 +46,7 @@ export default [
         nameStr:"登陆",
         isShow:false
     },
+    ...ticket,
     ...show,
     ...Plus,
     ...search,

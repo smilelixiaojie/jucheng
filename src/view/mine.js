@@ -9,9 +9,9 @@ import "../assets/style/mine/font_1221632_dzxh7zu5uik.css"
 import "../assets/style/mine/font_1220936_w14jsxzpz9.css"
 import "../assets/style/mine/app.e1af133cbb8abba4d20c311bb9ca2e51.css"
  class Mine extends Component{
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     componentWillMount(){
         this.props.getMenuItem();
     }
