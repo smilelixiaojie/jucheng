@@ -19,5 +19,8 @@ export default (state = homeState, { type, actions }) => {
     if(type === "UP_RECOMMEND"){
         state.recommendShow = actions.recommendShow;
     }
+    if(type === "TOUR_LIST"){
+        state.adlist=actions.adlist;
+    }
     return state;
 }

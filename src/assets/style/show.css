@@ -29,9 +29,38 @@
 .lxjbig{
     display: flex;
     width: 100%;
-    padding: 18px;
+    padding: 10px;
 }
 .lxjbig>img{
     width: 40%;
     height: 200px;
+}
+.lxjci{
+    width:60%;
+    height: 200px;
+    display: flex;
+    flex-direction:column;
+    padding: 10px;
+    justify-content: space-around;
+}
+.lxjci>h3{
+    width: 100%;  
+    /* height: 50px; 
+    text-overflow: ellipsis; */
+}
+.lxjci>p{
+    width: 100%;
+}
+.lxjprice{
+    display: flex;
+    align-items: center;
+}
+.lxjpr{
+    color: red;
+    /* font-weight: bolder; */
+    font-size: 20px;
+}
+.lxjq{
+    font-size: 15px;
+    padding-left: 5px;
 }

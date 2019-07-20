@@ -5,6 +5,7 @@ import Mine from "../view/mine";
 import Login from "../view/login";
 import show from "./show";
 import Plus from "./plus";
+import tour from "./tour"
 export default [
     {
         path:"/",
@@ -44,5 +45,6 @@ export default [
         isShow:false
     },
     ...show,
-    ...Plus
+    ...Plus,
+    ...tour
 ]

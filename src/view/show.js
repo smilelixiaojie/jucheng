@@ -1,6 +1,6 @@
 import  React from "react";
 import Swiper from 'swiper/dist/js/swiper.js'
-import 'swiper/dist/css/swiper.min.css'
+
 import {withRouter} from "react-router-dom"
 import axios from "axios";
 import {
@@ -13,8 +13,7 @@ constructor(props){
 }
     componentWillMount(){
         this.props.getShowCategory();
-        this.props.getShowList();
-       
+        this.props.getShowList(this.props.match.params.a,this.props.match.params.b);      
     }
         render(){
             return(
@@ -25,10 +24,22 @@ constructor(props){
                 </div>
                 <div className="swiper-container">
                 <div className="swiper-wrapper">
+                <div  className="swiper-slide" 
+                            onClick={
+                                this.props.getShowList.bind(this,this.props.match.params.a,0)
+                                
+                            }
+                            >全部</div>
                {
                    this.props.categorylist.map((v,i)=>{
+        
                         return (
-                            <div key={i}  className="swiper-slide">{v.name}</div>
+                            <div key={i} style={{color:this.props.match.params.b == v.category_id?"red":""}} className="swiper-slide" 
+                            onClick={
+                                this.props.getShowList.bind(this,this.props.match.params.a,v.category_id)
+                                
+                            }
+                            >{v.name}</div>
                         )
                    })
                }
@@ -43,11 +54,14 @@ constructor(props){
                         return(
                             <div key={i} className="lxjbig">
                                <img src={v.pic}></img>
-                              <div>
-                                    <h3>{v.show_time_top}</h3>
-                                    <h2>{v.name}</h2>
+                              <div className="lxjci">
+                                    <h4>{v.show_time_top}</h4>
+                                    <h3>{v.name}</h3>
                                     <p>{v.venue_name}</p>
-                                    <span>￥{v.min_price}</span><span>起</span>
+                                    <div className="lxjprice">
+                                    <span className="lxjpr">￥{v.min_price}</span>
+                                    <span className="lxjq">起</span>
+                                    </div>
                               </div>
                             </div>
 
@@ -99,10 +113,10 @@ function mapDispatchToProps(dispatch) {
                 });
             })
         },
-        getShowList(){
+        getShowList(a,b){
            
                     
-            axios.get("https://m.juooo.com/Search/getShowList?category="+this.match.params.b+"&city_id="+this.match.params.a+"&page=1&keywords=&version=6.0.1&referer=2&timestamp=1563280296")
+            axios.get("https://m.juooo.com/Search/getShowList?category="+b+"&city_id="+a+"&page=1&keywords=&version=6.0.1&referer=2&timestamp=1563280296")
             .then(data=>{
                 const showlist = data.data.data.list
                 console.log(data.data)
