@@ -4,19 +4,27 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import homeAction from "../store/actionCreator/home";
 import Swiper from 'swiper/dist/js/swiper.js'
-import 'swiper/dist/css/swiper.min.css'
+
 import { withRouter } from "react-router-dom";
+
+import axios from "axios";
 
 class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <div className="header">
+                <div className="header_home">
                     <div className="site">
                         <span>全国</span>
                     </div>
-
-                    <input type="text" placeholder="搜索热门演出" className="search" />
+                    <div className="search" onClick={() => {
+                        this.props.history.push("./search");
+                    }}>
+                        <span className="search_span">
+                            搜索热门演出
+                        </span>
+                    </div>
+                    <img src="https://image.juooo.com/group1/M00/02/65/rAoKmVyvD7iAHJX4AAADmpmoUeI150.png" alt=""/>
                 </div>
                 <div className="swiper">
                     <div className="swiper-container">
@@ -38,14 +46,13 @@ class Home extends Component {
                     {
                         this.props.classifyList.map((v, i) => {
                             return (
-                                                              
                                 <div key={i} className="classify_list_item" onClick={() => {
-                                    let arr =  v.url.split("?")[1].split("&")
+                                    let arr = v.url.split("?")[1].split("&")
                                     let obj = {};
-                                            for (let i of arr) {
-                                                obj[i.split("=")[0]] = i.split("=")[1];
-                                        }      
-                                    this.props.history.push("/show/"+obj.cid+"/"+obj.caid);
+                                    for (let i of arr) {
+                                        obj[i.split("=")[0]] = i.split("=")[1];
+                                    }
+                                    this.props.history.push("/show/" + obj.cid + "/" + obj.caid);
                                 }}>
                                     <img src={v.pic} alt="" />
                                     <span>{v.name}</span>
@@ -55,7 +62,19 @@ class Home extends Component {
                     }
                 </div>
                 <div className="banner">
-                    <img src="https://image.juooo.com//group1/M00/03/7A/rAoKNV0jflaAL5_EAAD3QE0LKFo824.png" alt="" />
+                   
+                    <img src="https://image.juooo.com//group1/M00/03/7A/rAoKNV0jflaAL5_EAAD3QE0LKFo824.png" onClick={
+                        
+                        ()=>{
+                            //let b= JSON.stringify(this.props.adlist).slice(JSON.stringify(this.props.adlist).indexOf("<body>"));
+                            this.props.history.push({
+                            pathname:"/tour/tourshowinfo?sid=35564",
+                            state:{
+                                b:this.props.adlist
+                            }
+                        });
+                        }
+                    } alt="" />
                 </div>
                 <div className="operation_list">
                     {
@@ -92,12 +111,13 @@ class Home extends Component {
                 </div>
                 <div className="floor_show">
                     {
+                        
                         [...this.props.floorShowList].splice(0,3).map((v, i) => {
                             return (
                                 <div key={i} className="floor_show_item">
                                     <h3>{v.title}</h3>
                                     {
-                                        [...v.list].splice(0,1).map((v,i) => {
+                                        [...v.list].splice(0, 1).map((v, i) => {
                                             return (
                                                 <div className="bg_c" key={i}>
                                                     <div className="left"><img src={v.pic} alt="" /></div>
@@ -114,7 +134,7 @@ class Home extends Component {
                                     <div className="drag-container">
                                         <div className="swiper-wrapper">
                                             {
-                                                [...v.list].splice(1,v.list.length-1).map((v, i) => {
+                                                [...v.list].splice(1, v.list.length - 1).map((v, i) => {
                                                     return (
                                                         <div className="drag-slide" key={i}>
                                                             <img src={v.pic} alt="" />
@@ -133,8 +153,8 @@ class Home extends Component {
                     }
                 </div>
                 <div className="recommend_show_list">
-                    <h3>为你推荐</h3>
-                    {
+                    <h3>为你推荐</h3>              
+                    {                     
                         this.props.recommendShow.map((v, i) => {
                             return (
                                 <div className="recommend_show_list_item" key={i}>
@@ -156,6 +176,7 @@ class Home extends Component {
     }
     componentDidMount() {
         document.title = this.props.title;
+
         console.log(this.props)
         new Swiper('.swiper-container', {
             observer: true,
@@ -168,7 +189,14 @@ class Home extends Component {
             }
         })
 
-    
+        new Swiper('.drag-container', {
+            pagination: '.drag-pagination',
+            slidesPerView: 4,
+            centeredSlides: false,
+            paginationClickable: true,
+        });
+       
+
     }
     componentWillMount() {
         this.props.getSlideList();
@@ -176,6 +204,8 @@ class Home extends Component {
         this.props.getHotShowList();
         this.props.getFloorShow();
         this.props.getRecommendShow();
+        this.props.getTourPage();
+        console.log(this.props.adlist)
     }
 }
 function mapStateToProps(state) {
@@ -186,6 +216,7 @@ function mapStateToProps(state) {
         hotShowList: state.homeInit.hotShowList,
         floorShowList: state.homeInit.floorShowList,
         recommendShow: state.homeInit.recommendShow,
+        adlist:state.homeInit.adlist
     }
 }
 export default withRouter(connect(mapStateToProps, dispatch => bindActionCreators(homeAction, dispatch))(Home));

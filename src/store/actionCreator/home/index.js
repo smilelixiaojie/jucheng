@@ -21,8 +21,9 @@ export default {
             axios.get("https://m.juooo.com/home/getClassifyItem?city_id=0&operation_limit=5&version=6.0.1&referer=2")
                 .then(({ data }) => {
                     const classifyList = data.data.classify_list;
-                    const operationList = data.data.operation_list;
                     
+                    const operationList = data.data.operation_list;
+                   
                     dispatch({
                         type: "UP_CLASSIFYLIST",
                         actions: {
@@ -35,6 +36,7 @@ export default {
                             operationList
                         }
                     })
+                   
                 })
         }
     },
@@ -87,5 +89,24 @@ export default {
                     })
                 })
         }
+    },
+    getTourPage(){
+        return((dispatch)=>{
+            axios.get("https://api.juooo.com/home/index/getClassifyHome?city_id=1&abbreviation=SZ&version=6.0.1&referer=2")
+            .then(({data})=>{
+                    const adlist=data.data.ad_list.advert1[0].url;
+                    console.log(adlist)
+                dispatch({
+                    type:"TOUR_LIST",
+                    actions:{
+                        adlist
+                    }
+                })
+               
+            })
+        }
+
+        )
     }
+   
 }
