@@ -5,6 +5,7 @@ import Mine from "../view/mine";
 import Login from "../view/login";
 import show from "./show";
 import search from "./search";
+import tour from "./tour"
 export default [
     {
         path:"/",
@@ -44,5 +45,9 @@ export default [
         isShow:false
     },
     ...show,
+<<<<<<< HEAD
     ...search
+=======
+    ...tour
+>>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
 ]

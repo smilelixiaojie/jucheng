@@ -1,7 +1,8 @@
 import Show from "../view/show";
 export default [
     {
-        path:"/show",
+        
+        path:"/show/:a/:b",
         exact:false,
         component:Show,
         nameStr:"演出",

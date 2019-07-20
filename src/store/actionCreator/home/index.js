@@ -21,7 +21,9 @@ export default {
             axios.get("https://m.juooo.com/home/getClassifyItem?city_id=0&operation_limit=5&version=6.0.1&referer=2")
                 .then(({ data }) => {
                     const classifyList = data.data.classify_list;
-                    const operationList = data.data.operation_list
+                    
+                    const operationList = data.data.operation_list;
+                   
                     dispatch({
                         type: "UP_CLASSIFYLIST",
                         actions: {
@@ -34,6 +36,10 @@ export default {
                             operationList
                         }
                     })
+<<<<<<< HEAD
+=======
+                   
+>>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
                 })
         }
     },
@@ -57,6 +63,10 @@ export default {
             axios.get("https://m.juooo.com/home/getFloorShow?city_abb=SZ&city_id=1&version=6.0.1&referer=2&timestamp=1563266607")
                 .then(({data})=>{
                     const floorShowList = data.data;
+<<<<<<< HEAD
+=======
+                    // console.log(floorShowList)
+>>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
                     dispatch({
                         type:"UP_FLOORSHOW",
                         actions: {
@@ -85,5 +95,28 @@ export default {
                     })
                 })
         }
+<<<<<<< HEAD
     }
+=======
+    },
+    getTourPage(){
+        return((dispatch)=>{
+            axios.get("https://api.juooo.com/home/index/getClassifyHome?city_id=1&abbreviation=SZ&version=6.0.1&referer=2")
+            .then(({data})=>{
+                    const adlist=data.data.ad_list.advert1[0].url;
+                    console.log(adlist)
+                dispatch({
+                    type:"TOUR_LIST",
+                    actions:{
+                        adlist
+                    }
+                })
+               
+            })
+        }
+
+        )
+    }
+   
+>>>>>>> 5927e751ec9014d94f0c6423a7ca72bc9f9bbaeb
 }
