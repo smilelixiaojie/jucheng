@@ -15,7 +15,7 @@ class Movie extends Component {
                 <p className="header">
                     剧院
                 </p>
-                <div className="wrap">
+                <div id="lalala" className="wrap">
                     {
                         this.props.movieList.map((v, i) => {
                             return (
@@ -25,9 +25,10 @@ class Movie extends Component {
                                         <h4 >{v.name}</h4>
                                         <p>{v.count}场演出在售</p>
                                     </div>
-                                    <div className="swiper-container">
+                                    <div id={"swiper-container"+i} className="swiper-container">
                                         <div className="swiper-wrapper">
                                             {
+                                               
                                                 v.show_list.map((v, i) => {
                                                     return (
                                                         <div key={i} className="swiper-slide">
@@ -41,7 +42,7 @@ class Movie extends Component {
                                             }
 
                                         </div>
-                                        <div className="swiper-pagination"></div>
+                                        <div id={"swiper-pagination"+i} className="swiper-pagination"></div>
                                     </div>
                                 </div>
                             )
@@ -56,12 +57,7 @@ class Movie extends Component {
         this.props.getMovieList()
         console.log(this.props)
 
-       new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            slidesPerView:3,
-            centeredSlides: false,
-            paginationClickable: true,
-        });
+     
     }
 
 }
@@ -85,6 +81,18 @@ function mapDispatchToProps(dispatch) {
                         }
 
                     })
+                    setTimeout(()=>{
+                        movieList.forEach((v,i) => {
+                            new Swiper('#swiper-container'+i, {
+                                pagination: '#swiper-pagination'+i,
+                                slidesPerView:3,
+                                centeredSlides: false,
+                                paginationClickable: true,
+                            });
+                        });
+                       
+                    },2000)
+                    
                 })
         }
     }

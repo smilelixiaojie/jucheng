@@ -143,7 +143,7 @@ class Ticket extends Component {
 
                     </div>
                     <div className="tour-cities__list">
-                        <div className="swiper-container">
+                        <div id="xixixi" className="swiper-container">
                             <div className="swiper-wrapper">
                                 {
                                     this.props.tourCityList.tour_list.map((v, i) => {
@@ -158,6 +158,7 @@ class Ticket extends Component {
 
                                     })
                                 }
+                                
                             </div>
                             <div className="swiper-pagination"></div>
                         </div>
