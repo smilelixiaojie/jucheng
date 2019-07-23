@@ -1,10 +1,10 @@
 const proxy = require("http-proxy-middleware");
 module.exports = function(app){
-    app.use("/ele",proxy({
-        target:"http://localhost:80",
+    app.use("/api",proxy({
+        target:"https://api.juooo.com",
         changeOrigin:true,
         pathRewrite:{
-            "^/ele":""
+            "^/api":""
         }
     }))
 }

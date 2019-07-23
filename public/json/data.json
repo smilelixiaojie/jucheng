@@ -1,0 +1,28 @@
+ {
+
+    "data":{
+        "basic_info":{ 
+            "nick_name": "橙子",
+            "photo":"https://image.juooo.com/group1/M00/03/6F/rAoKNV0XF2uABEtSAAANUrP00o0602.png",
+            "scores": 6,
+            "uid": "6755177",
+            "user_money": "0"
+        },
+        
+        "coupon_info":{
+            "total": 0
+        },
+        "now_time": 1563348088,
+        "plus_info": {
+            "group_id": 253,
+             "is_plus": 0
+            },
+       
+        "vip_info": [{
+            "vip_state": 0
+            }]  
+    }
+ }
+
+
+  

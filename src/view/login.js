@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "../assets/style/login.css"
-import Router,{withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom"
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import loginAction from "../store/actionCreator/login";
