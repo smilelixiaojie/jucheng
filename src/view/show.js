@@ -28,6 +28,7 @@ constructor(props){
                    <p>演出</p>
                    <i className="iconfont icon-more" ></i>
                 </div>
+                <div id="lxjwith">
                 <div className="swiper-container">
                 <div className="swiper-wrapper">
                 <div  style={{color:this.state.b === 0?"#ff6743":"",borderBottom:this.state.b === 0? "1px solid  #ff6743":""}}  className="swiper-slide  lxjswiper-slide" 
@@ -71,7 +72,7 @@ constructor(props){
        
                
             </div>
-
+            </div>
             <div>
             {
                     this.props.showlist.map((v,i)=>{
