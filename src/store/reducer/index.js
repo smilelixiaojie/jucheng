@@ -1,5 +1,7 @@
 import {combineReducers} from "redux";
 import homeInit from "./home";
+import movieInit from "./movie"
+import ticketInit from "./ticket"
 import userInit from "./login";
 import searchInit from "./search";
 import show from "./show";
@@ -14,6 +16,8 @@ export default combineReducers({
     tourInit,
     mineInit,
     show,
+    movieInit,
+    ticketInit,
     plusInit
    
 })
