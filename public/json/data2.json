@@ -1,0 +1,61 @@
+{
+    "data": [
+        {
+           "icon": "icon-order",
+           "link": "/my/myOrderList",
+           "theme": 1,
+           "title": "我的订单",
+           "type": 1
+        },
+    
+    {
+    "icon": "icon-ticketholder",
+    "link": "/eticket/mine",
+    "theme": 1,
+    "title": "我的票夹",
+    "type": 1
+    },
+    
+    {
+    "icon": "icon-cardpackage",
+    "link": "/myjuooo/myYearcard",
+    "theme": 1,
+    "title": "我的卡包",
+    "type": 1
+    },
+    
+    {},
+    {
+    "icon": "icon-people",
+    "link": "/Myjuooo/myRealNameCertification",
+    "theme": 1,
+    "title": "实名购票人",
+    "type": 1
+    },
+    
+    {
+    "icon": "icon-address",
+    "link": "/Myjuooo/myaddress",
+    "theme": 1,
+    "title": "收货地址",
+    "type": 1
+    },
+    
+    {
+    "icon": "icon-feedback",
+    "link": "/feedback/index",
+    "theme": 1,
+    "title": "意见反馈",
+    "type": 1
+    },
+    
+    {
+    "icon": "icon-help",
+    "link": "",
+    "theme": 2,
+    "title": "客服帮助",
+    "type": 2
+    }  
+    ]
+    
+}

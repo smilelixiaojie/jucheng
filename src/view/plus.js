@@ -13,7 +13,8 @@ class Plus extends Component{
     }
     render(){
         return (                  
-          <div data-v-478076c1="" className="plus">  
+          <div data-v-478076c1="" className="plus"> 
+          {console.log(this.props.plusVipList) } 
                <div data-v-478076c1="" className="plus__head">
                    <section data-v-80cac780="" data-v-478076c1="" className="title">
                       <span data-v-80cac780="" className="title__text">橙PLUS卡</span> 
@@ -133,7 +134,8 @@ class Plus extends Component{
 function mapDispatchToProps(dispatch){
    return {
      getplusCard(){
-        axios.get("https://api.juooo.com/Card/Product/info?version=6.0.1&referer=2")
+         //https://api.juooo.com/Card/Product/info?version=6.0.1&referer=2
+        axios.get("/api/Card/Product/info?version=6.0.1&referer=2")
         .then(({data})=>{
             console.log(data.data)
             const plusCardList=data.data;
@@ -148,7 +150,7 @@ function mapDispatchToProps(dispatch){
         })
      },
      getplusVip(){
-        axios.get("https://api.juooo.com/vip/index/getVipRule?vip_rule_id=1&type=0&version=6.0.1&referer=2")
+        axios.get("/api/vip/index/getVipRule?vip_rule_id=1&type=0&version=6.0.1&referer=2")
         .then(({data})=>{
             console.log(data.data)
             const plusVipList=data.data;

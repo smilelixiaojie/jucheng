@@ -5,7 +5,7 @@ import searchInit from "./search";
 import show from "./show";
 import tourInit from "./tour";
 import mineInit from "./mine";
-import plusInit from "./mine";
+import plusInit from "./plus";
 export default combineReducers({
     homeInit,
     userInit,
