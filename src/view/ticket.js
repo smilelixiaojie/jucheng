@@ -26,7 +26,7 @@ class Ticket extends Component {
                             <img alt="" src={this.props.ticketList.share_data.share_pic} />
                             <div className="title">
                                 <h3>{this.props.ticketList.share_data.share_title}</h3>
-                                <p>￥{this.props.ticketList.static_data.price_range}
+                                <p className="zyl">￥{this.props.ticketList.static_data.price_range}
 
                                 </p>
                             </div>
@@ -41,7 +41,7 @@ class Ticket extends Component {
 
 
                                 this.props.ticketList.item_list.map((v, i) => {
-                                    console.log(2222, this.props.ticketList.static_data.city.city_name)
+                                   
 
 
                                     return (
@@ -192,7 +192,7 @@ class Ticket extends Component {
                                 <div key={i} className="recommend__list">
                                 <div className="item">
                                     <div className="cover__item__cover">
-                                        <img alt="" src={v.pic}/>
+                                        <img alt="" src={v.pic} />
                                     </div>
                                     <div className="item__info">
                                         <div className="item__info__date-week">

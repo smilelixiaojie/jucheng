@@ -25,8 +25,8 @@ class Login extends Component{
                    <h1>欢迎来到聚橙网</h1>
                 </div>
                 <ul className="list">
-                    <li><input type="text" name="userName" onChange={this.onChang.bind(this)} defaultValue="请输入用户名"/></li>
-                    <li><input type="password" name="password" onChange={this.onChang.bind(this)} defaultValue="请输入密码"/></li>
+                    <li><input type="text" name="userName" onChange={this.onChang.bind(this)} placeholder="请输入用户名"/></li>
+                    <li><input type="password" name="password" onChange={this.onChang.bind(this)} placeholder="请输入密码"/></li>
                 </ul> 
                 <div className="btn">
                   <div onClick={this.login.bind(this)}>登录</div>        

@@ -13,5 +13,13 @@ export default{
                 })
             })
         }
+    },
+    getSearchKey(k){
+        return(dispatch)=>{
+            axios.get("/api/search/index?k="+k)
+            .then(({data})=>{
+                console.log(data)
+            })
+        }
     }
 }

@@ -54,7 +54,9 @@
     width:310px;
     height:193px;
 }
-
+#lalala .swiper-slide{
+    margin: 0 5px;
+}
 #lalala .swiper-slide>.img{
     width: 107px;
     height: 146px;

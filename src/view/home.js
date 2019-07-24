@@ -26,7 +26,8 @@ class Home extends Component {
                     </div>
                     <img src="https://image.juooo.com/group1/M00/02/65/rAoKmVyvD7iAHJX4AAADmpmoUeI150.png" alt=""/>
                 </div>
-                <div className="swiper">
+                <div className="csqout">
+                <div className="swiper  csqswiper">
                     <div className="swiper-container">
                         <div className="swiper-wrapper">
                             {
@@ -42,6 +43,7 @@ class Home extends Component {
                         <div className="swiper-pagination"></div>
                     </div>
                 </div>
+               
                 <div className="classify_list" >
                     {
                         this.props.classifyList.map((v, i) => {
@@ -54,7 +56,7 @@ class Home extends Component {
                                     }
                                     this.props.history.push("/show/" + obj.cid + "/" + obj.caid);
                                 }}>
-                                    <img src={v.pic} alt="" />
+                                    <img className="csqimgs" src={v.pic} alt="" />
                                     <span>{v.name}</span>
                                 </div>
                             )
@@ -79,6 +81,7 @@ class Home extends Component {
                     // } 
                     alt="" /></a>
                 </div>
+              
                 <div className="operation_list">
                     {
                         this.props.operationList.map((v, i) => {
@@ -95,7 +98,7 @@ class Home extends Component {
                 <div className="hot_show">
                     <h3>热门演出</h3>
                     <div className="hot_show_pic">
-                        <div className="drag-container">
+                        <div className="drag-container" id="csq">
                             <div className="swiper-wrapper">
                                 {
                                     this.props.hotShowList.map((v, i) => {
@@ -140,7 +143,7 @@ class Home extends Component {
                                                 [...v.list].splice(1, v.list.length - 1).map((v, i) => {
                                                     return (
                                                         <div className="drag-slide" key={i}>
-                                                            <img src={v.pic} alt="" />
+                                                            <img src={v.pic} alt=""/>
                                                             <h3>{v.schedular_name}</h3>
                                                             <p><strong>￥{v.low_price}</strong>起</p>
                                                         </div>
@@ -173,6 +176,7 @@ class Home extends Component {
                         })
                     }
 
+                </div>
                 </div>
             </div>
         )

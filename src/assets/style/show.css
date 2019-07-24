@@ -28,6 +28,10 @@
 .lxjtitle>.showbody{
     text-align: center;
 }
+.lxjtitle>.icon-more{
+    position: absolute;
+    right:30px;
+}
 .lxjtitle>button{
     position: absolute;
     left: 0;

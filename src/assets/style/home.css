@@ -56,16 +56,21 @@
     font-size: 13px;
     color: #fefefe;
 }
-.swiper{
+.csqout{
+   width: 100%;
+   position: absolute;
+   top:0px;
+}
+.csqswiper{
     width: 375px;
     height: 196px;
     overflow: hidden;
-    margin-bottom:15px; 
+    margin-top:30px; 
 }
-.swiper img{
+/* .swiper img{
     width: 375px;
     height: 196px;
-}
+} */
 .classify_list{
     width: 375px;
     height: 83px;
@@ -80,7 +85,7 @@
 }
 .classify_list_item img{
     width: 51px;
-    width: 51px;
+    height: 51px;
 }
 .classify_list_item span{
     font-size: 13px;
@@ -93,13 +98,14 @@
 .banner img{
     width: 345px;
     height: 100px;
+    margin-top: 10px;
 }
 .operation_list{
     width:375px;
     height: 202px;
     overflow: hidden;
-    text-align: center;
-    margin-top:20px;
+    margin-top: 20px;
+    margin-left: 35px;
 }
 .operation_list .item:nth-child(1){
     display: inline-block;

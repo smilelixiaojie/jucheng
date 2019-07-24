@@ -26,7 +26,7 @@ constructor(props){
                 ></img>
                   
                    <p className="showbody">演出</p>
-                   <i className="iconfont icon-more" ></i>
+                   <i className="iconfont icon-more"></i>
                 </div>
                 <div id="lxjwith">
                 <div className="swiper-container">
@@ -78,7 +78,9 @@ constructor(props){
                     this.props.showlist.map((v,i)=>{
                         return(
                             <div key={i} className="lxjbig">
-                               <img src={v.pic}></img>
+                               <img src={v.pic} onClick={()=>{
+                                    this.props.history.push("/ticket/"+v.schedular_id+"/"+v.show_id)
+                               }}></img>
                               <div className="lxjci">
                                     <h3>{v.show_time_top}</h3>
                                     <h2>{v.name}</h2>

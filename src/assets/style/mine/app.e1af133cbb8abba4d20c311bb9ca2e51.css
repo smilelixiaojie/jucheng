@@ -60001,8 +60001,8 @@ img[src=""][data-v-42ac18f6] {
 }
 .mine-setting__list__item[data-v-6db6250d] {
  width:25%;
- text-align:center;
- padding:.44rem 0 .53333rem;
+ 
+ padding:.44rem 0  .53333rem .4rem;
  font-size:.32rem;
  color:#666
 }
