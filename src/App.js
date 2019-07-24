@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import rootRoute from "./route/"
 import GuardRouter from "./component/guardRouter";
 import {connect} from "react-redux";
-import 'swiper/dist/css/swiper.min.css'
+// import 'swiper/dist/css/swiper.min.css'
 class App extends Component {
   constructor(props){
     super(props);

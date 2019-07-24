@@ -2,12 +2,11 @@
     margin: 0;
     padding: 0;
 }
-#lxjwith  .lxjswiper-slide {
+#lxjwith>.swiper-container>.swiper-wrapper  .lxjswiper-slide {
         text-align: center;
         font-size: 16px;
-        background: #fff;
+        background-color: rgba(255,255,255,0);
         width: 60px;
-        line-height: 40px;
         
 }
 .lxjleft{
@@ -24,6 +23,10 @@
     width: 100%;
     justify-content: center;
     padding: 10px;
+    
+}
+.lxjtitle>.showbody{
+    text-align: center;
 }
 .lxjtitle>button{
     position: absolute;
@@ -32,6 +35,11 @@
 .lxjtitle>p{
    font-size: 18px;
       
+}
+.ding{
+    
+    position: absolute;
+    top:110px;
 }
 .lxjbig{
     display: flex;

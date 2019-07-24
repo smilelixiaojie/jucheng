@@ -25,7 +25,7 @@ constructor(props){
                  onClick={()=>{this.props.history.go(-1)}}
                 ></img>
                   
-                   <p>演出</p>
+                   <p className="showbody">演出</p>
                    <i className="iconfont icon-more" ></i>
                 </div>
                 <div id="lxjwith">
@@ -73,7 +73,7 @@ constructor(props){
                
             </div>
             </div>
-            <div>
+            <div className="ding">
             {
                     this.props.showlist.map((v,i)=>{
                         return(
